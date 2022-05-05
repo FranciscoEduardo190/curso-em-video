@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio006</title>
+</head>
+<body>
+   <h1>manipulando DOM</h1> 
+   <h2>somando valores</h2>
+   <input type="number" name="numero" id="numero01"> +
+   <input type="number" name="numero1" id="numero02">
+   <input type="button" value="somar" id="soma" onclick="somar()">
+   <div id="res">resultado</div>
+   <script>
+      function somar() {
+       var pega00 = window.document.getElementById("numero01")
+       var pega01 = window.document.getElementById("numero02")
+       var res = window.document.getElementById("res")
+       var n1 = Number.parseInt(pega00.value)
+       var n2 = Number.parseInt(pega01.value)
+       var r = n1 + n2;
+       res.innerText = r
+    }
+   </script>
+</body>
+</html>

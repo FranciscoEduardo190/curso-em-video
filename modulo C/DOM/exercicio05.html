@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+     body{
+         background-color: black;
+         color: blueviolet;
+     }
+     div#salva{
+       font: normal 20pt Arial;
+       background-color: aqua;
+       width: 250px;
+       height: 250px;
+       text-align: center;
+       line-height: 200px;
+     }
+   </style>
+    <title>Manipulando DOM</title>
+</head>
+<body>
+    <h1>Manipulando DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>usando <strong>DOM</strong> no html</p>
+    <div id="elemento">clique aqui</div>
+    <h1>eventos DOM</h1>
+    <div id="salva" onclick="clicar()" onmouseenter="entrar()" onmouseleave="saiu()">
+      interaja
+    </div>
+    <script>
+      var ele = window.document.getElementById("elemento")
+      ele.innerText = "estou"
+      /*eventos DOM*/
+    function clicar(){
+      var teste = window.document.getElementById("salva").innerText = "salve"
+      var teste1 = window.document.getElementById("salva").style.backgroundColor = "red"
+    }
+    function entrar(){
+      var muda = window.document.getElementById("salva").style.color = "blue"
+      var muda01 = window.document.getElementById("salva").innerText = "merda"
+    }
+    function saiu(){
+      var texto = window.document.getElementById("salva")
+      texto.innerText = "saiu"
+      var saiua = window.document.getElementById("salva").style.color = "purple"
+      var teste2 = window.document.getElementById("salva").style.backgroundColor = "aqua"
+        }
+        </script>
+</body>
+</html>
